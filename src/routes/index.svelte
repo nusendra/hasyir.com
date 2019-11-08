@@ -1,5 +1,5 @@
 <style>
-	h1, figure, p {
+	h1, h2, figure, p {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -33,14 +33,15 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Hasyir.com</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Hi world, my name is Hasyir!</h1>
+<h2>I was born { age }</h2>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<script>
+  import { formatDistanceToNow  } from 'date-fns'
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+  // Month start from 0
+  let age = formatDistanceToNow(new Date(2019, 8, 29), { addSuffix: true })
+</script>
