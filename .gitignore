@@ -4,3 +4,4 @@ __sapper__
 dist
 /runtime/app.mjs
 /runtime/server.mjs
+build
